@@ -1,7 +1,7 @@
 # Discord-JSON-chats-to-HTML
 
 Simple python script to convert Discord JSON chats to html for easier reading.
-The json2html module is required. 
+The json2html module is required and does all the work. 
 
 ``` $ pip install json2html ```
 
