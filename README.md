@@ -1,6 +1,7 @@
 # Discord JSON chats to HTML and EXCEL
 
 **JSON2HTML**
+
 Simple python script to convert Discord JSON chats to html for easier reading.
 The json2html module is required and does all the work. 
 
@@ -26,6 +27,7 @@ More info here:
 Your mileage will vary depending on what character font sets are selected and supported by your operating system.
 
 **JSON2XLS**
+
 Simple python script to convert Discord JSON chats to html for easier reading.
 The pandas, xlsxwriter and xlwt modules are required.
 
