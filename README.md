@@ -2,7 +2,7 @@
 
 For an explanation on how to find Discord app chats in Windows see here:
 
-``https://abrignoni.blogspot.com/2018/03/finding-discord-app-chats-in-windows.html``
+(https://abrignoni.blogspot.com/2018/03/finding-discord-app-chats-in-windows.html)
 
 **JSON2HTML**
 
@@ -13,7 +13,7 @@ The json2html module is required and does all the work.
 
 More info here:
 
-``` https://pypi.python.org/pypi/json2html ``` 
+(https://pypi.python.org/pypi/json2html) 
 
 Usage:
 
