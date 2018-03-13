@@ -18,4 +18,10 @@ More info here:
 
 ``` python main.py >> chats.html ```
 
+3. For unicode conversion issues set the following:
+
+``` set PYTHONIOENCODING=utf-8 ```
+ 
+Your mileage will vary depending on what character font sets are selected and supported by your operating system.
+
 Pending work: Make script ingest all files in a directory to create one html document.
