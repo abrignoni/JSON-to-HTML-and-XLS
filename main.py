@@ -62,5 +62,10 @@ if (selected == "1"):
 			file.write(afuera)
 			file.close()
 print("Files processed: "+ str(count))
-print("Files located at: " + path2input + "/" + "converted-HTML" + "/")
+
+if (selected == "2"):
+	print("Files located at: " + path2input + "/" + "converted-XLS" + "/")
+
+if (selected == "1"):
+	print("Files located at: " + path2input + "/" + "converted-XLS" + "/")
 		
