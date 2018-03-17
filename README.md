@@ -23,6 +23,8 @@ Required modules:
 3. Select conversion format. Select #1 for html or #2 for xls.
 4. Converted files will be located in a new folder within the Discord chat json files directory.
 
+![alt text](usage.jpg "Usage example")
+
 **Note**
 All json files have to be in the selected directory. Script will not due a recursive search.
 
