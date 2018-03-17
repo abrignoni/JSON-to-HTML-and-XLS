@@ -6,27 +6,11 @@ For an explanation on how to find Discord app chats in Windows see here:
 
 **JSON2HTML**
 
-Simple python script to convert Discord JSON chats to html for easier reading.
-The json2html module is required and does all the work. 
+Simple python script to convert Discord json chats to html or xls for easier reading.
+
+Required modules:
 
 ``` pip install json2html ```
-
-More info here:
-
-(https://pypi.python.org/pypi/json2html) 
-
-Usage:
-
-1. Write the filename of the json chat to be converted and save script.
-
-``` file = open('file2beconverted', 'r') ```
-
-2. Run the script.
-
-**JSON2XLS**
-
-Simple python script to convert Discord JSON chats to html for easier reading.
-The pandas, xlsxwriter and xlwt modules are required.
 
 `` pip install pandas ``
 
@@ -36,12 +20,7 @@ The pandas, xlsxwriter and xlwt modules are required.
 
 Usage:
 
-1. Write the filename of the json chat to be converted and save the script.
-
-``` file = open('file2beconverted', 'r') ```
-
-2. Run the script.
-
-Pending work: 
-1. Make scripts ingest all files in a directory instead of one by one.
-2. Create prompts for directory location and desired output all in one script.
+1. Run the main.py script
+2. Write the path to the directory that contains the Discord chat json files.
+3. Select conversion format. Select #1 for html or #2 for xls.
+4. After conversion see the count of processed files. Converted files will be located in a new folder within the Discord chat json files directory.
