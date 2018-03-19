@@ -5,6 +5,10 @@ from json2html import *
 loop = 1
 count = 0
 
+print("Convert JSON Discord chats to HTML or XLS")
+print("https://abrignoni.blogspot.com")
+print("Twitter: @AlexisBrignoni")
+
 while loop == 1:
 	print ("Write path to files: ")
 	path2input = input()
@@ -22,9 +26,11 @@ while loop == 2:
 	if (selected == "1"):
 		loop = 3
 		print ("HTML selected")
+		print()
 		
 	elif (selected == "2"):
 		print ("XLS selected")
+		print()
 		loop = 3
 	else:
 		print ("Invalid selection.")
@@ -39,11 +45,19 @@ if (selected == "2"):
 		if os.path.isdir(path2input + "/" + filename):
 			count=count-1 #make sure a directory check does not count as a processed file.
 		else:
-			file = open(path2input + "/" + filename, 'r')
-			input = file.read() 
-			file.close()
-			data = pd.read_json(input)
-			data.to_excel(path2input + "/" + "converted-XLS" + "/" + filename +'.xls', index=False)
+			try:
+				file = open(path2input + "/" + filename, 'r')
+				input = file.read() 
+				file.close()
+				data = pd.read_json(input)
+				data.to_excel(path2input + "/" + "converted-XLS" + "/" + filename +'.xls', index=False)
+			except:
+				checkerrors = 1;
+				print("Unable to convert: "+ path2input + '/' + filename)
+				errors = open(path2input + "/converted-XLS/error.txt", 'a')
+				errors.write("Unable to convert: "+ path2input + '/' + filename + '\n')
+				errors.close()		
+				pass
 			
 if (selected == "1"):
 	os.makedirs(path2input + "/" + "converted-HTML" + "/")
@@ -61,11 +75,23 @@ if (selected == "1"):
 			file = open(path2input + "/" + "converted-HTML" + "/" + filename +'.html', 'w', encoding="utf-8")
 			file.write(afuera)
 			file.close()
+
+print()
 print("Files processed: "+ str(count))
 
 if (selected == "2"):
-	print("Files located at: " + path2input + "/" + "converted-XLS" + "/")
+	print()
+	print("Converted files located at: " + path2input + "/" + "converted-HTML" + "/")
+	print()
 
 if (selected == "1"):
-	print("Files located at: " + path2input + "/" + "converted-XLS" + "/")
-		
+	print()
+	print("Converted files located at: " + path2input + "/" + "converted-XLS" + "/")
+	print()
+	
+if (checkerrors == 1):
+	print("See error log: "+ path2input + "/" + "converted-XLS" + "/errors.txt" + ". Process as HTML to view contents of these files." )
+	print("Script will now close.")
+	print() 	
+
+os.system('pause')
