@@ -6,8 +6,10 @@ loop = 1
 count = 0
 
 print("Convert JSON Discord chats to HTML or XLS")
+print()
 print("https://abrignoni.blogspot.com")
 print("Twitter: @AlexisBrignoni")
+print()
 
 while loop == 1:
 	print ("Write path to files: ")
@@ -19,16 +21,19 @@ while loop == 1:
 		print ("Directory does not exist.")
 
 while loop == 2:
+	print()
 	print ("Select conversion format:")
 	print ("1: HTML")
 	print ("2: XLS")
 	selected = input()
 	if (selected == "1"):
 		loop = 3
+		print()
 		print ("HTML selected")
 		print()
 		
 	elif (selected == "2"):
+		print()
 		print ("XLS selected")
 		print()
 		loop = 3
