@@ -12,7 +12,7 @@ print("Twitter: @AlexisBrignoni")
 print()
 
 while loop == 1:
-	print ("Write path to files: ")
+	print ("Write or copy-paste the path to the JSON files: ")
 	path2input = input()
 	if os.path.exists(path2input):
 		#print ("Directory exists -> "+path2input)
