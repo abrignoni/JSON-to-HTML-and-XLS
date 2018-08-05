@@ -72,13 +72,13 @@ if (selected == "1"):
 		if os.path.isdir(path2input + "/" + filename):
 			count=count-1 
 		else:
-			file = open(path2input + "/" + filename, 'r', encoding="utf-16") 
+			file = open(path2input + "/" + filename, 'r', encoding="utf-8") 
 			input = file.read() 
 			file.close()
 
 			afuera = json2html.convert(json = input, clubbing = False)
 
-			file = open(path2input + "/" + "converted-HTML" + "/" + filename +'.html', 'w', encoding="utf-16")
+			file = open(path2input + "/" + "converted-HTML" + "/" + filename +'.html', 'w', encoding="utf-8")
 			file.write(afuera)
 			file.close()
 
