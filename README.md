@@ -1,4 +1,4 @@
-# Discord JSON chats to HTML and EXCEL
+# JSON to HTML and EXCEL
 
 Simple python script to convert Discord json chats to html or xls for easier reading.
 
