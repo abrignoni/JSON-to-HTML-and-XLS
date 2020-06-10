@@ -1,4 +1,4 @@
-import sys, os
+import sys, os, json
 import pandas as pd
 from json2html import *
 
@@ -72,15 +72,19 @@ if (selected == "1"):
 		if os.path.isdir(path2input + "/" + filename):
 			count=count-1 
 		else:
-			file = open(path2input + "/" + filename, 'r', encoding="utf-8") 
-			input = file.read() 
-			file.close()
+			try:
+				file = open(path2input + "/" + filename, 'r', encoding="utf-8")
+				input = file.read() 
+				file.close()
+					
+				afuera = json2html.convert(json = input, clubbing = False)
 
-			afuera = json2html.convert(json = input, clubbing = False)
-
-			file = open(path2input + "/" + "converted-HTML" + "/" + filename +'.html', 'w', encoding="utf-8")
-			file.write(afuera)
-			file.close()
+				file = open(path2input + "/" + "converted-HTML" + "/" + filename +'.html', 'w', encoding="utf-8")
+				file.write(afuera)
+				file.close()
+			except:
+				print(f'The {filename} file is not a valid json object')
+				count=count-1
 
 print()
 print("Files processed: "+ str(count))
